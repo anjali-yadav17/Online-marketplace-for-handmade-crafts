@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handmade Crafts Marketplace</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #6a4c93;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      background: #563d7c;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+    .card h3 {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+    .card p {
+      color: #555;
+    }
+    .btn {
+      background: #6a4c93;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #563d7c;
+    }
+    .cart-box {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      display: none;
+    }
+    footer {
+      background: #6a4c93;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Handmade Crafts Marketplace</h1>
+    <p>Discover beautiful handmade items from talented creators!</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#cart">View Cart</a>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Welcome to Our Marketplace</h2>
+    <p>Browse unique handmade crafts, perfect for gifts and collections.</p>
+  </section>
+
+  <!-- Shop Section -->
+  <section id="shop">
+    <h2>Our Crafts</h2>
+    <div class="container">
+      <!-- 24 Products -->
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Handmade Necklace</h3><p>$25.00</p><button class="btn" onclick="addToCart('Handmade Necklace')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Wooden Jewelry Box</h3><p>$40.00</p><button class="btn" onclick="addToCart('Wooden Jewelry Box')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Ceramic Vase</h3><p>$30.00</p><button class="btn" onclick="addToCart('Ceramic Vase')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Knitted Scarf</h3><p>$20.00</p><button class="btn" onclick="addToCart('Knitted Scarf')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Bamboo Basket</h3><p>$15.00</p><button class="btn" onclick="addToCart('Bamboo Basket')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Beaded Bracelet</h3><p>$18.00</p><button class="btn" onclick="addToCart('Beaded Bracelet')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Clay Pot</h3><p>$12.00</p><button class="btn" onclick="addToCart('Clay Pot')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Handwoven Mat</h3><p>$22.00</p><button class="btn" onclick="addToCart('Handwoven Mat')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Macrame Wall Hanging</h3><p>$28.00</p><button class="btn" onclick="addToCart('Macrame Wall Hanging')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Woolen Sweater</h3><p>$45.00</p><button class="btn" onclick="addToCart('Woolen Sweater')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Hand-painted Mug</h3><p>$14.00</p><button class="btn" onclick="addToCart('Hand-painted Mug')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Wicker Chair</h3><p>$80.00</p><button class="btn" onclick="addToCart('Wicker Chair')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Stone Sculpture</h3><p>$60.00</p><button class="btn" onclick="addToCart('Stone Sculpture')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Handmade Soap Set</h3><p>$10.00</p><button class="btn" onclick="addToCart('Handmade Soap Set')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Embroidery Cushion</h3><p>$26.00</p><button class="btn" onclick="addToCart('Embroidery Cushion')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Terracotta Plate</h3><p>$16.00</p><button class="btn" onclick="addToCart('Terracotta Plate')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Wool Rug</h3><p>$55.00</p><button class="btn" onclick="addToCart('Wool Rug')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Paper Lantern</h3><p>$9.00</p><button class="btn" onclick="addToCart('Paper Lantern')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Knitted Gloves</h3><p>$12.00</p><button class="btn" onclick="addToCart('Knitted Gloves')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Painted Canvas</h3><p>$75.00</p><button class="btn" onclick="addToCart('Painted Canvas')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Hand-carved Bowl</h3><p>$35.00</p><button class="btn" onclick="addToCart('Hand-carved Bowl')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Silk Shawl</h3><p>$48.00</p><button class="btn" onclick="addToCart('Silk Shawl')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Glass Wind Chime</h3><p>$19.00</p><button class="btn" onclick="addToCart('Glass Wind Chime')">Add to Cart</button></div>
+      <div class="card"><img src="https://via.placeholder.com/250x150" alt=""><h3>Hand-painted Plate</h3><p>$22.00</p><button class="btn" onclick="addToCart('Hand-painted Plate')">Add to Cart</button></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We connect talented artisans with customers who appreciate unique, handmade crafts. 
+       Every product here is created with love and care to bring joy to your life.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@handmadecrafts.com</p>
+    <p>Phone: +91 98765 43210</p>
+    <p>Address: 123 Craft Street, Art City, India</p>
+  </section>
+
+  <!-- Cart Section -->
+  <section id="cart">
+    <h2>Your Shopping Cart</h2>
+    <div class="cart-box" id="cart-box">
+      <ul id="cart-items"></ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Handmade Crafts Marketplace. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    let cart = [];
+
+    function addToCart(item) {
+      cart.push(item);
+      updateCart();
+    }
+
+    function updateCart() {
+      const cartBox = document.getElementById('cart-box');
+      const cartItems = document.getElementById('cart-items');
+      cartBox.style.display = cart.length > 0 ? 'block' : 'none';
+
+      cartItems.innerHTML = '';
+      cart.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.textContent = item + " ";
+        
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = "Remove";
+        removeBtn.style.marginLeft = "10px";
+        removeBtn.onclick = () => removeFromCart(index);
+        
+        li.appendChild(removeBtn);
+        cartItems.appendChild(li);
+      });
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      updateCart();
+    }
+  </script>
+
+</body>
+</html>
