@@ -19,8 +19,8 @@ This project provides a simple **e-commerce platform** built with **HTML, CSS, a
 
 ```
 handmade-crafts-marketplace/
-│── website.html       # Main HTML file with embedded CSS & JavaScript
-│── README.md          # Project documentation
+│── website.html       
+│── README.md          
 ```
 
 ---
